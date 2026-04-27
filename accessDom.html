@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .col{
+            background-color: lightgoldenrodyellow;
+            margin-bottom: 10px;
+        }
+        label{
+            display: inline-block;
+            width: 150px;
+        }
+        input,select{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body class="col">
+    <h2>Organizational Details Form</h2> 
+    <label for="">Enter Name:</label>
+    <input type="text" id="nameId"> <br>
+
+    <label for="">Address:</label>
+    <input type="text" id="addId"> <br>
+
+    <label for="">Country:</label>
+    <select name="" id="conId">
+        <option value="select">Select</option>
+        <option value="aus">Australia</option>
+        <option value="brazil">Brazil</option>
+        <option value="canada">Canada</option>
+        <option value="den">Denmark</option>
+        <option value="ind">India</option>
+        <option value="jap">Japan</option>
+        <option value="german">Germany</option>
+    </select> <br>
+
+    <label for="">Phone Number:</label>
+    <input type="tel" id="numId"> <br>
+
+    <label for="">Do you have GST:</label>
+
+    <input type="radio" name="GST" value="yes"><label for="">Yes</label>
+    <input type="radio" name="GST" value="no"><label for="">No</label> 
+    <br>
+
+    <div id="resId"></div>
+
+    <button id="butone" type="button">Submit</button>  
+    <button id="butwo" type="button">Clear</button>
+
+
+
+    <script src="./accessDom.js"></script>
+</body> 
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <label for="nameId">Enter Name:</label>
+    <input type="text" id="nameId"><br>
+
+    <label for="ageId">Enter Age:</label>
+    <input type="text" id="ageId"><br>
+
+    <p id="pId">Invalid</p>
+
+    <button id="btn">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        let nameValue = document.getElementById("nameId");
+        let ageValue = document.getElementById("ageId");
+        let res = document.getElementById("result");
+        let submit = document.getElementById("btn");
+        let pTag = document.getElementById("pId");
+
+        submit.addEventListener("click",()=>{
+            let patOne = /[a-z]/;
+            let patTwo = /[0-9]/;
+
+            if (patOne.test(nameValue.value)) {
+                res.innerText = `User Name : ${nameValue.value}`
+            }else if (patTwo.test(ageValue)) {
+                res.innerText = `User Age : ${ageValue.value}`
+            }else{
+                nameValue.style.borderColor = "red";
+                ageValue.style.borderColor ="red";
+                pTag.style.display = "inline"
+            }
+        })
+    </script>
+</body>
+</html>
